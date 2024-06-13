@@ -53,12 +53,15 @@ Moraxia has a wide range of built-in operators and allows you to create custom o
   * <iterable> is short for: "for element in iterable".
   * This operator can be used in functions:
   * Consider f to be a pre-defined function: f(<iterator>) is equivalent to: "for element in iterator { f(element); }
-  * This operator has some built-in functions and names to help with storing it, and naming its variables:
+  * This operator has some built-in functions and names to simplify interacting with it:
     * args: This refers to the arguments of a function
     * name(): This function sets the name of the element as the name of a variable.
       * Usage(inside a class): func f(self, ...) { self.name(<args>) = <args>; }
       * The code snippet you saw does what you probably have guessed, it assigns each argument to its value.
-      * Example: "func f(self, width, height) { self.name(<args>) = <args>; }" is equivalent to: 
+      * Example: "func f(self, width, height) { self.name(<args>) = <args>; }" is equivalent to: "func f(self, width, height) { self.width = width; self.height = height; }"
+* Class access operator:
+  * This operator is used to access the initial values of a class as well as the functions inside it.
+  * Usage: 'self.x', 'self.f(8, 2)', 'MyClass.p', ...
 
 ### Custom
 Defining custom operators is a simple process:
@@ -117,9 +120,9 @@ struct Connection {
 }
 
 ## Classes
-A classe is a stucture bound with certain functions.
-The structure serves an initialization of values for the class.
-To access the values in the structure of a class, or the functions of said class, you can use 'self' followed by the "class access operator" then the name of what you need to access(e.g. self.x, self.f(5, 3), ...)
+A class is a structure bound with certain functions.
+The structure serves as an initialization of values for the class.
+To access the values in the structure of a class, or the functions of said class, you can use 'self' followed by the "class access operator" and then the name of what you need to access(e.g. self.x, self.f(5, 3), ...)
 
 **Example:**
 * Consider the structure 'MyClass' to be already defined, containing: 'int x', and 'int y'.
