@@ -42,7 +42,7 @@ Moraxia has a wide range of built-in operators and allows you to create custom o
   * Greater than or equal: a >= b
   * Less than strictly: a < b
   * Less than or equal: a <= b
-* Iterator operators:
+* Iterator-object operators:
   * Index: itr\[i\]
 * Pointers:
   * Point to: *p
