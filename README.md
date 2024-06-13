@@ -60,9 +60,13 @@ Moraxia has a wide range of built-in operators and allows you to create custom o
       * The code snippet you saw does what you probably have guessed, it assigns each argument to its value.
       * Example: "func f(self, width, height) { self.name(<args>) = <args>; }" is equivalent to: 
 
-## Custom
+### Custom
 Defining custom operators is a simple process:
-def 
+* Assume the custom operator is '#', it takes two integers and returns f(a, b)—an already-defined function.
+def int a # int b { f(a, b) }
+
+**Note:** The 'def' keyword is similar to a function, it can have multiple instructions and a return-line.
+
 ## Comments
 Comments are segments ignored by the compiler.
 
@@ -85,8 +89,42 @@ A function can contain multiple return-lines through conditionals(e.g. if, else,
 * func add(a, b) { a + b }
 
 ## Function calling
-You can access the instructions inside a function using certain arguments by calling said function.
+To access the instructions and return value inside a function f with specified arguments, you can call it.
 
 **Example:**
 Consider f to be an already-defined function that takes two arguments. Here, we'll store the returned value in a variable called 'x'
 * x = f(5, 3);
+
+## Structures
+A structure is a bunch of variables/constants in one place.
+
+**Example:**
+struct MyStruct {
+ int value;
+ char* name;
+}
+
+## Enumerations
+An enumeration is a bunch of values stored together, each one represents a positive integer starting from 0.
+
+**Example:**
+enum Message { Succes, Failed };
+
+**Usage:**
+struct Connection {
+ Message success_state;
+ int error_code;
+}
+
+## Classes
+A classe is a stucture bound with certain functions.
+The structure serves an initialization of values for the class.
+To access the values in the structure of a class, or the functions of said class, you can use 'self' followed by the "class access operator" then the name of what you need to access(e.g. self.x, self.f(5, 3), ...)
+
+**Example:**
+* Consider the structure 'MyClass' to be already defined, containing: 'int x', and 'int y'.
+class MyClass {
+ func f(self) {
+  self.x + self.y
+ }
+}
