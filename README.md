@@ -26,8 +26,7 @@ Moraxia has a wide range of data types, ranging from variable types to specifica
     * Array: array
 
 **Notes:**
-* You can use the data types as follows:
-"singularity mutability type"
+* You can use the data types in the following order: "singularity mutability type"
 * Singularity defaults to single, and mutability defaults to mutable
 
 **Examples:**
